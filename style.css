@@ -1,0 +1,160 @@
+.body {
+  margin: 0 auto;
+  background: url("images/Background.png") center;
+  height: 100vh;
+}
+
+.screen {
+  transition: margin 0.5s ease-out;
+  height: 1vh;
+  margin: 0 auto;
+  padding: 10px 69px 0 102px;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.title {
+  font-family: roboto_Bold, Arial, sans-serif;
+  font-size: 57px;
+  line-height: 67px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 0;
+  margin: 0 0 9px 0;
+}
+
+.description {
+  font-family: roboto_Medium, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 100;
+  color: #FFF;
+  padding: 0;
+  margin: 0 0 60px 0;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  font-family: roboto_Bold, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 59px;
+  font-weight: bold;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 99px 0;
+}
+
+.nav__item {
+  padding: 0 0 25px 50px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 1s;
+}
+
+.nav__item:hover{
+  color: #87ceeb;
+}
+
+.mark::before {
+  background: url("/images/Rectangle.png") no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 75%;
+  margin-left: -48px;
+}
+
+.button {
+  font-family: roboto_Bold, Arial, sans-serif;
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  background: #D62B2E;
+  border-radius: 10px;
+  padding: 29px 85px;
+  box-shadow: 2px 4px 6px #524646;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #bf2528;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 86vw;
+  height: 53vw;
+  margin: 0 auto;
+} 
+
+.container {
+  background-color: transparent;
+  width: 15vw;
+  height: 24vw;
+  perspective: 1000px;
+  padding: 0.9vw;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.active {
+  transform: rotateY(180deg);
+}
+
+.game-card__front, .game-card__back, .game-card__bug{
+  position: absolute;
+  width: 103%;
+  height: 105%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.game-card__back {
+  background: url('images/BACK.png') no-repeat;
+  background-size: 100%;
+}
+
+.game-card__front {
+  background: url('images/GameOver.png') no-repeat;
+  background-size: 99%;
+  transform: rotateY(180deg);
+}
+
+.game-card__bug {
+  background: url('images/BUG.png') no-repeat;
+  background-size: 99%;
+  transform: rotateY(180deg);
+}
+
+.active {
+  transform: rotateY(180deg);
+}
+
+.hidden {
+  display: none;
+}
