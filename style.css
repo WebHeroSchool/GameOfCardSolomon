@@ -1,18 +1,15 @@
 .body {
+  max-width: 1440px;
+  max-height: 1024px;
   margin: 0 auto;
   background: url("images/Background.png") center;
-  height: 100vh;
 }
 
 .screen {
   transition: margin 0.5s ease-out;
-  height: 1vh;
   margin: 0 auto;
-  padding: 10px 69px 0 102px;
-}
-
-.screen.up {
-  margin-top: -100vh;
+  padding: 9vw 8vw 0 7vw;
+  height: 100vh;
 }
 
 .title {
@@ -38,6 +35,7 @@
 .section {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 .nav {
@@ -75,7 +73,7 @@
 
 .button {
   font-family: roboto_Bold, Arial, sans-serif;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 37px;
   font-weight: bold;
   text-decoration: none;
@@ -97,8 +95,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 86vw;
-  height: 53vw;
+  width: 88vw;
+  height: 51vw;
   margin: 0 auto;
 } 
 
@@ -107,7 +105,7 @@
   width: 15vw;
   height: 24vw;
   perspective: 1000px;
-  padding: 0.9vw;
+  padding: 0.6vw 0.9vw;
   flex-wrap: wrap;
 }
 
@@ -135,8 +133,10 @@
 }
 
 .game-card__back {
-  background: url('images/BACK.png') no-repeat;
+  background: url(images/BACK.png) no-repeat;
   background-size: 100%;
+  background-position-x: -1px;
+  background-position-y: 17px;
 }
 
 .game-card__front {
@@ -157,4 +157,268 @@
 
 .hidden {
   display: none;
+}
+
+.cards-menu {
+  width: 41vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards-menu__one {
+  width: 41%;
+  height: 100%;
+  background: url(/GameOfCardSolomon/images/Card1.png) no-repeat;
+  background-size: 49%;
+  background-position-y: 222px;
+  background-position-x: 120px;
+  position: absolute;
+}
+
+.cards-menu__two {
+  width: 46%;
+  height: 100%;
+  background: url(/GameOfCardSolomon/images/Card2.png) no-repeat;
+  background-size: 59%;
+  background-position-x: 246px;
+  background-position-y: 232px;
+  position: absolute;
+}
+
+@media (min-width: 1441px) {
+  .cards {
+    width: 43vw;
+  }
+
+  .card__one {
+    width: 550px;
+  }
+
+  .card__two {
+    width: 620px;
+  }
+}
+
+@media (min-width: 2018px) {
+  .cards {
+    width: 35vw;
+  }
+}
+
+@media (min-width: 2128px) {
+  .cards {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 3450px) {
+  .cards {
+    width: 16vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .body {
+    height: 100%;
+  }
+
+  .wrapper {
+    padding: 88px 69px 0 72px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 54px;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 13px;
+    margin: 0 0 42px 0;
+  }
+
+  .nav {
+    font-size: 35px;
+    line-height: 31px;
+    margin: 0 0 52px 0;
+  }
+
+  .button {
+    font-size: 22px;
+  }
+
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 0 28px 34px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .mark::before {
+    width: 6%;
+    height: 55%;
+    margin-left: -34px;
+  }
+
+  .button {
+    padding: 21px 61px;
+  }
+
+  .card__one {
+    background-position-y: 152px;
+    background-position-x: 69px;
+  }
+
+  .card__two {
+    background-position-x: 159px;
+    background-position-y: 158px;
+  }
+}
+
+@media (max-width: 842px) {
+  .card__one {
+    background-position-y: 152px;
+    background-position-x: 0;
+  }
+
+  .card__two {
+    background-position-x: 63px;
+    background-position-y: 158px;
+  }
+}
+
+@media (max-width: 727px) {
+  .wrapper {
+    padding: 64px 69px 0 53px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .description {
+    font-size: 9px;
+    margin: 0 0 23px 0;
+  }
+
+  .nav {
+    font-size: 25px;
+    margin: 0 0 33px 0;
+  }
+
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 0 10px 24px;
+  }
+
+  .mark::before {
+    width: 6%;
+    height: 70%;
+    margin-left: -24px;
+  }
+
+  .button {
+    padding: 15px 42px;
+    font-size: 16px;
+  }
+
+  .cards {
+    width: 43vw;
+  }
+
+  .card__one {
+    background-position-y: 103px;
+    background-position-x: 0;
+  }
+
+  .card__two {
+    background-position-x: 66px;
+    background-position-y: 107px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 30px 40px;
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .description {
+    font-size: 1.6vw;
+  }
+
+  .nav {
+    font-size: 4vw;
+    margin: 0 0 7px 0;
+  }
+
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 4vw;
+  }
+
+  .mark::before {
+    width: 2vw;
+    height: 4vh;
+    margin-left: -4vw;
+  }
+
+  .card__one {
+    background-position-y: 49px;
+    background-position-x: 0;
+  }
+
+  .card__two {
+    background-position-x: 49px;
+    background-position-y: 55px;
+  }
+}
+
+@media (max-width: 490px) {
+  .wrapper {
+    padding: 54px 40px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 4vw;
+    align-self: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  .button {
+    padding: 2vh 23vw;
+    font-size: 4vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .cards {
+    justify-content: center;
+    align-self: center;
+  }
+
+  .cards {
+    height: 100%;
+  }
+
+  .card__two {
+    height: 100%;
+  }
 }
