@@ -64,7 +64,7 @@
 }
 
 .mark::before {
-  background: url("/images/Rectangle.png") no-repeat center;
+  background: url("images/Rectangle.png") no-repeat center;
   background-size: 100%;
   position: absolute;
   content: "";

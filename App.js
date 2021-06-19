@@ -19,8 +19,7 @@ for (const navItem of navItems) {
 button.addEventListener('click', discoverLevel)
 function discoverLevel() {
   level = document.querySelector('.mark')
-  level = parseInt(level.dataset.hard);
-  console.log(level)                                                           //УБРАТЬ
+  level = parseInt(level.dataset.hard);                                                      //УБРАТЬ
   screen[0].classList.add('hidden');
   startGame()
   if (level === 6) {
@@ -30,6 +29,9 @@ function discoverLevel() {
 let e = 0;
 //Создаем карты в зависимости от уровня
 function startGame() {
+const randonNum = Math.floor(Math.random() * level)
+const cardBug = `url('images/BUG.png') no-repeat`;
+
   for (let i = 0; i < level; i++) {
     const container = document.createElement('div')
     container.classList.add('container')
@@ -46,16 +48,18 @@ function startGame() {
     const gameCardBack = document.createElement('div')
     gameCardBack.classList.add('game-card__back')
     gameCard.append(gameCardBack)
+
+    if(randonNum === i) {
+      gameCardFront.classList.add('game-card__bug')
+    }
   }
   gameCardExisting = document.querySelectorAll('.game-card');
   gameCardFrontExisting = document.querySelectorAll('.game-card__front')
 
-  console.log(Array.from(gameCardFrontExisting)) // УБРАТЬ
-
-  
   gameCardExisting.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
     function up() {
+      // let e = 0;
       if (e < 2) {
         item.classList.add('active');
         e++
@@ -67,5 +71,4 @@ function startGame() {
     }
     item.addEventListener('click', up);
   })
-
 }
