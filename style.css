@@ -213,6 +213,10 @@
   .cards-menu__two {
     width: 620px;
   }
+  
+  .button {
+    padding: 23px 40px;
+  }
 }
 
 @media (min-width: 2018px) {
