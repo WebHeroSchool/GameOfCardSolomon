@@ -3,6 +3,7 @@
   max-height: 1024px;
   margin: 0 auto;
   background: url("images/Background.png") center;
+  overflow: hidden;
 }
 
 .screen {
@@ -95,7 +96,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 88vw;
+  width: 86vw;
   height: 51vw;
   margin: 0 auto;
 } 
@@ -127,7 +128,8 @@
 .game-card__front, .game-card__back, .game-card__bug{
   position: absolute;
   width: 103%;
-  height: 105%;
+  height: 104%;
+  border-radius: 7px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -137,18 +139,31 @@
   background-size: 100%;
   background-position-x: -1px;
   background-position-y: 17px;
+  transition: transform 0.3s ease-in;
+}
+
+.game-card__back:hover {
+  transform: translate(0,-15px) rotate(-3deg);
+  -webkit-transform: translate(0,-15px) rotate(-3deg); /* Chrome & Safari */ 
+    -o-transform: translate(0,-15px) rotate(-3deg); /* Opera */
+    -moz-transform: translate(0,-15px) rotate(-3deg); /* Firefox */
+  box-shadow: 7px 10px 16px -5px #2a333d;
 }
 
 .game-card__front {
   background: url('images/GameOver.png') no-repeat;
   background-size: 99%;
   transform: rotateY(180deg);
+  background-position-x: 5px;
+  background-position-y: 17px;
 }
 
 .game-card__bug {
   background: url('images/BUG.png') no-repeat;
   background-size: 99%;
   transform: rotateY(180deg);
+  background-position-x: -1px;
+  background-position-y: 17px;
 }
 
 .active {
@@ -169,7 +184,7 @@
 .cards-menu__one {
   width: 41%;
   height: 100%;
-  background: url(/GameOfCardSolomon/images/Card1.png) no-repeat;
+  background: url(images/Card1.png) no-repeat;
   background-size: 49%;
   background-position-y: 222px;
   background-position-x: 120px;
@@ -179,7 +194,7 @@
 .cards-menu__two {
   width: 46%;
   height: 100%;
-  background: url(/GameOfCardSolomon/images/Card2.png) no-repeat;
+  background: url(images/Card2.png) no-repeat;
   background-size: 59%;
   background-position-x: 246px;
   background-position-y: 232px;
@@ -187,40 +202,41 @@
 }
 
 @media (min-width: 1441px) {
-  .cards {
+  .cards-menu {
     width: 43vw;
   }
 
-  .card__one {
+  .cards-menu__one {
     width: 550px;
   }
 
-  .card__two {
+  .cards-menu__two {
     width: 620px;
   }
 }
 
 @media (min-width: 2018px) {
-  .cards {
+  .cards-menu {
     width: 35vw;
   }
 }
 
 @media (min-width: 2128px) {
-  .cards {
+  .cards-menu {
     width: 25vw;
   }
 }
 
 @media (min-width: 3450px) {
-  .cards {
+  .cards-menu {
     width: 16vw;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .body {
     height: 100%;
+    overflow: auto;
   }
 
   .wrapper {
@@ -248,7 +264,7 @@
     font-size: 22px;
   }
 
-  .nav__easy, .nav__normal, .nav__hard {
+  .nav__item {
     padding: 0 0 28px 34px;
     margin: 0;
     cursor: pointer;
@@ -265,26 +281,102 @@
     padding: 21px 61px;
   }
 
-  .card__one {
+  .cards-menu__one {
     background-position-y: 152px;
     background-position-x: 69px;
   }
 
-  .card__two {
+  .cards-menu__two {
     background-position-x: 159px;
     background-position-y: 158px;
+  }
+
+  .game-card__back, .game-card__bug, .game-card__front {
+    background-position-x: 0;
+    background-position-y: 0;
+    height: 99%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    padding: 88px 69px 0 72px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 54px;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 13px;
+    margin: 0 0 42px 0;
+  }
+
+  .nav {
+    font-size: 35px;
+    line-height: 31px;
+    margin: 0 0 52px 0;
+  }
+
+  .button {
+    font-size: 22px;
+  }
+
+  .nav__item {
+    padding: 0 0 28px 34px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .mark::before {
+    width: 6%;
+    height: 55%;
+    margin-left: -34px;
+  }
+
+  .button {
+    padding: 21px 61px;
+  }
+
+  .cards-menu__one {
+    background-position-y: 152px;
+    background-position-x: 69px;
+  }
+
+  .cards-menu__two {
+    background-position-x: 159px;
+    background-position-y: 158px;
+  }
+
+  .game-card__back, .game-card__bug, .game-card__front {
+    background-position-x: 0;
+    background-position-y: 0;
+    height: 99%;
   }
 }
 
 @media (max-width: 842px) {
-  .card__one {
+  .cards-menu__one {
     background-position-y: 152px;
     background-position-x: 0;
   }
 
-  .card__two {
+  .cards-menu__two {
     background-position-x: 63px;
     background-position-y: 158px;
+  }
+
+  .game-card__back, .game-card__bug, .game-card__front {
+    background-position-x: 0;
+    background-position-y: 0;
   }
 }
 
@@ -308,7 +400,7 @@
     margin: 0 0 33px 0;
   }
 
-  .nav__easy, .nav__normal, .nav__hard {
+  .nav__item {
     padding: 0 0 10px 24px;
   }
 
@@ -323,18 +415,23 @@
     font-size: 16px;
   }
 
-  .cards {
+  .cards-menu {
     width: 43vw;
   }
 
-  .card__one {
+  .cards-menu__one {
     background-position-y: 103px;
     background-position-x: 0;
   }
 
-  .card__two {
+  .cards-menu__two {
     background-position-x: 66px;
     background-position-y: 107px;
+  }
+
+  .game-card__back, .game-card__bug, .game-card__front {
+    background-position-x: 0;
+    background-position-y: 0;
   }
 }
 
@@ -356,24 +453,33 @@
     margin: 0 0 7px 0;
   }
 
-  .nav__easy, .nav__normal, .nav__hard {
+  .nav__item {
     padding: 0 4vw;
   }
 
   .mark::before {
     width: 2vw;
-    height: 4vh;
+    height: 6vh;
     margin-left: -4vw;
   }
 
-  .card__one {
+  .game-card__front, .game-card__back, .game-card__bug{
+    border-radius: 6px;
+  }
+
+  .cards-menu__one {
     background-position-y: 49px;
     background-position-x: 0;
   }
 
-  .card__two {
+  .cards-menu__two {
     background-position-x: 49px;
     background-position-y: 55px;
+  }
+
+  .game-card__back, .game-card__bug, .game-card__front {
+    background-position-x: 0;
+    background-position-y: 0;
   }
 }
 
@@ -387,7 +493,7 @@
     flex-direction: column;
   }
 
-  .nav__easy, .nav__normal, .nav__hard {
+  .nav__item {
     padding: 0 4vw;
     align-self: center;
   }
@@ -402,23 +508,32 @@
   }
 
   .button {
-    padding: 2vh 23vw;
+    padding: 1vh 23vw;
     font-size: 4vw;
     align-items: center;
     justify-content: center;
     display: flex;
   }
 
-  .cards {
+  .cards-menu {
     justify-content: center;
     align-self: center;
   }
 
-  .cards {
+  .cards-menu {
     height: 100%;
   }
 
-  .card__two {
+  .cards-menu__two {
     height: 100%;
+  }
+
+  .game-card__front, .game-card__back, .game-card__bug{
+    border-radius: 3px;
+  }
+
+  .game-card__back, .game-card__bug, .game-card__front {
+    background-position-x: 0;
+    background-position-y: 0;
   }
 }
