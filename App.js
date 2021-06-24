@@ -2,8 +2,6 @@ const navItems = document.querySelectorAll('.nav__item');
 const button = document.querySelector('.button');
 const screen = document.querySelectorAll('.screen')
 const field = document.querySelector('.field')
-let gameCardFrontExisting;
-let gameCardExisting;
 let level;
 
 for (const navItem of navItems) {
@@ -28,10 +26,9 @@ function discoverLevel() {
 }
 
 let countClick = 0;
-//Создаем карты в зависимости от уровня
-function startGame() {
-const randonNum = Math.floor(Math.random() * level)
 
+function buildCards() {
+  const randonNum = Math.floor(Math.random() * level)
   for (let i = 0; i < level; i++) {
     const container = document.createElement('div')
     container.classList.add('container')
@@ -53,8 +50,13 @@ const randonNum = Math.floor(Math.random() * level)
       gameCardFront.classList.add('game-card__bug')
     }
   }
-  gameCardExisting = document.querySelectorAll('.game-card');
-  gameCardFrontExisting = document.querySelectorAll('.game-card__front')
+}
+
+//Создаем карты в зависимости от уровня
+function startGame() {
+  buildCards()
+  let gameCardExisting = document.querySelectorAll('.game-card');
+  let gameCardFrontExisting = document.querySelectorAll('.game-card__front')
 
   gameCardExisting.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
