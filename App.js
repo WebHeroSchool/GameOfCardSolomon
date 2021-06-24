@@ -56,7 +56,6 @@ function buildCards() {
 function startGame() {
   buildCards()
   let gameCardExisting = document.querySelectorAll('.game-card');
-  let gameCardFrontExisting = document.querySelectorAll('.game-card__front')
 
   gameCardExisting.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
