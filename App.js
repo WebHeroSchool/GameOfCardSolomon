@@ -23,11 +23,11 @@ function discoverLevel() {
   screen[1].classList.remove('hidden');
   startGame()
   if (level === 6) {
-    field.style.width = '60vw'
+    field.style.width = '55vw'
   }
 }
 
-let e = 0;
+let countClick = 0;
 //Создаем карты в зависимости от уровня
 function startGame() {
 const randonNum = Math.floor(Math.random() * level)
@@ -59,16 +59,16 @@ const randonNum = Math.floor(Math.random() * level)
   gameCardExisting.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
     function up() {
-      if (e < 2) {
+      if (countClick < 2) {
         item.classList.add('active');
-        e++
-      } if (e === 2) {
+        countClick++
+      } if (countClick === 2) {
         item.classList.remove('active');
         screen[0].classList.remove('hidden');
         screen[1].classList.add('hidden');
         field.innerHTML = ''
-        field.style.width = '86vw'
-        e = 0
+        field.style.width = ''
+        countClick = 0
       }
     }
     item.addEventListener('click', up);
