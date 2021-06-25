@@ -13,8 +13,6 @@ for (const navItem of navItems) {
   });
 }
 
-button.addEventListener("click", discoverLevel);
-
 let countClick = 0;
 
 function buildCards() {
@@ -63,16 +61,18 @@ function startGame() {
       }
     }
     item.addEventListener("click", up);
-  })
+  });
 }
 
 function discoverLevel() {
   level = document.querySelector(".mark");
-  level = parseInt((level.dataset.hard));
+  level = parseInt(level.dataset.hard);
   screen[0].classList.add("hidden");
   screen[1].classList.remove("hidden");
   startGame();
   if (level === 6) {
     field.style.width = "55vw";
   }
+
+  button.addEventListener("click", discoverLevel);
 }
