@@ -438,6 +438,8 @@
     background-position-y: 0;
     height: 99%;
     background-size: 101%;
+    background-position-x: 0;
+    background-position-y: 0;
   }
 }
 
@@ -450,13 +452,6 @@
   .cards-menu__two {
     background-position-x: 63px;
     background-position-y: 158px;
-  }
-
-  .game-card__back,
-  .game-card__bug,
-  .game-card__front {
-    background-position-x: 0;
-    background-position-y: 0;
   }
 }
 
@@ -549,6 +544,8 @@
   .game-card__back,
   .game-card__bug{
     border-radius: 6px;
+    background-position-x: 0;
+    background-position-y: 0;
   }
 
   .cards-menu__one {
@@ -559,13 +556,6 @@
   .cards-menu__two {
     background-position-x: 49px;
     background-position-y: 55px;
-  }
-
-  .game-card__back,
-  .game-card__bug,
-  .game-card__front {
-    background-position-x: 0;
-    background-position-y: 0;
   }
 }
 
@@ -615,11 +605,6 @@
   .game-card__back,
   .game-card__bug {
     border-radius: 3px;
-  }
-
-  .game-card__back,
-  .game-card__bug,
-  .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
   }
