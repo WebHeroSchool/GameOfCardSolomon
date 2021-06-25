@@ -100,7 +100,7 @@
   width: 86vw;
   height: 51vw;
   margin: 0 auto;
-} 
+}
 
 .container {
   background-color: transparent;
@@ -147,9 +147,12 @@
 
 .game-card__back:hover {
   transform: translate(0,-15px) rotate(-3deg);
-  -webkit-transform: translate(0,-15px) rotate(-3deg); /* Chrome & Safari */ 
-    -o-transform: translate(0,-15px) rotate(-3deg); /* Opera */
-    -moz-transform: translate(0,-15px) rotate(-3deg); /* Firefox */
+  /* Chrome & Safari */
+  -webkit-transform: translate(0,-15px) rotate(-3deg);
+    /* Opera */
+    -o-transform: translate(0,-15px) rotate(-3deg);
+    /* Firefox */
+    -moz-transform: translate(0,-15px) rotate(-3deg);
   box-shadow: 7px 19px 16px -5px #2a333d;
 }
 
@@ -216,13 +219,13 @@
   .cards-menu__two {
     width: 620px;
   }
-  
+
   .button {
     padding: 23px 40px;
   }
 
-  .game-card__front, 
-  .game-card__back, 
+  .game-card__front,
+  .game-card__back,
   .game-card__bug {
     height: 103%;
   }
@@ -251,8 +254,8 @@
     flex-wrap: wrap;
   }  
 
-  .game-card__front, 
-  .game-card__back, 
+  .game-card__front,
+  .game-card__back,
   .game-card__bug {
     height: 102%;
   }
@@ -280,7 +283,7 @@
 }
 
 @media (min-width: 2600px) {
-  .game-card__front, 
+  .game-card__front,
   .game-card__back,
   .game-card__bug {
     height: 99%;
@@ -298,8 +301,8 @@
     width: 16vw;
   }
 
-  .game-card__front, 
-  .game-card__back, 
+  .game-card__front,
+  .game-card__back,
   .game-card__bug {
     height: 98%;
   }
@@ -431,8 +434,8 @@
     background-position-y: 158px;
   }
 
-  .game-card__back, 
-  .game-card__bug, 
+  .game-card__back,
+  .game-card__bug,
   .game-card__front {
     background-position-x: 1px;
     background-position-y: 0;
@@ -452,8 +455,8 @@
     background-position-y: 158px;
   }
 
-  .game-card__back, 
-  .game-card__bug, 
+  .game-card__back,
+  .game-card__bug,
   .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
@@ -509,8 +512,8 @@
     background-position-y: 107px;
   }
 
-  .game-card__back, 
-  .game-card__bug, 
+  .game-card__back,
+  .game-card__bug,
   .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
@@ -545,8 +548,8 @@
     margin-left: -4vw;
   }
 
-  .game-card__front, 
-  .game-card__back, 
+  .game-card__front,
+  .game-card__back,
   .game-card__bug{
     border-radius: 6px;
   }
@@ -561,8 +564,8 @@
     background-position-y: 55px;
   }
 
-  .game-card__back, 
-  .game-card__bug, 
+  .game-card__back,
+  .game-card__bug,
   .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
@@ -614,14 +617,14 @@
     height: 100%;
   }
 
-  .game-card__front, 
-  .game-card__back, 
-  .game-card__bug{
+  .game-card__front,
+  .game-card__back,
+  .game-card__bug {
     border-radius: 3px;
   }
 
-  .game-card__back, 
-  .game-card__bug, 
+  .game-card__back,
+  .game-card__bug,
   .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
