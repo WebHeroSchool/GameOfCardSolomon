@@ -146,13 +146,13 @@
 }
 
 .game-card__back:hover {
-  transform: translate(0,-15px) rotate(-3deg);
+  transform: translate(0, -15px) rotate(-3deg);
   /* Chrome & Safari */
-  -webkit-transform: translate(0,-15px) rotate(-3deg);
+  -webkit-transform: translate(0, -15px) rotate(-3deg);
     /* Opera */
-    -o-transform: translate(0,-15px) rotate(-3deg);
+    -o-transform: translate(0, -15px) rotate(-3deg);
     /* Firefox */
-    -moz-transform: translate(0,-15px) rotate(-3deg);
+    -moz-transform: translate(0, -15px) rotate(-3deg);
   box-shadow: 7px 19px 16px -5px #2a333d;
 }
 
@@ -170,10 +170,6 @@
   transform: rotateY(180deg);
   background-position-x: 2px;
   background-position-y: 17px;
-}
-
-.active {
-  transform: rotateY(180deg);
 }
 
 .hidden {
@@ -402,6 +398,7 @@
 
   .button {
     font-size: 22px;
+    padding: 21px 61px;
   }
 
   .nav__item {
@@ -415,10 +412,6 @@
     width: 6%;
     height: 55%;
     margin-left: -34px;
-  }
-
-  .button {
-    padding: 21px 61px;
   }
 
   .cards-menu__one {
