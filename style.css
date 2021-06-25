@@ -19,7 +19,7 @@
   font-size: 57px;
   line-height: 67px;
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   padding: 0;
   margin: 0 0 9px 0;
 }
@@ -80,7 +80,7 @@
   font-weight: bold;
   text-decoration: none;
   color: #FFF;
-  background: #D62B2E;
+  background: #d62b2e;
   border-radius: 10px;
   padding: 29px 85px;
   box-shadow: 2px 4px 6px #524646;
@@ -126,7 +126,9 @@
   transform: rotateY(180deg);
 }
 
-.game-card__front, .game-card__back, .game-card__bug{
+.game-card__front,
+.game-card__back,
+.game-card__bug {
   position: absolute;
   width: 103%;
   height: 104%;
@@ -219,7 +221,9 @@
     padding: 23px 40px;
   }
 
-  .game-card__front, .game-card__back, .game-card__bug {
+  .game-card__front, 
+  .game-card__back, 
+  .game-card__bug {
     height: 103%;
   }
 }
@@ -238,18 +242,20 @@
     height: 35vw;
   }
 
-.container {
-  background-color: transparent;
-  width: 11vw;
-  height: 18vw;
-  perspective: 1000px;
-  padding: 0.3vw 0.6vw;
-  flex-wrap: wrap;
-}
+  .container {
+    background-color: transparent;
+    width: 11vw;
+    height: 18vw;
+    perspective: 1000px;
+    padding: 0.3vw 0.6vw;
+    flex-wrap: wrap;
+  }  
 
-.game-card__front, .game-card__back, .game-card__bug {
-  height: 102%;
-}
+  .game-card__front, 
+  .game-card__back, 
+  .game-card__bug {
+    height: 102%;
+  }
 }
 
 @media (min-width: 2128px) {
@@ -270,11 +276,13 @@
   .game-card__back {
     background-position-x: 4px;
     background-position-y: 22px;
-}
+  }
 }
 
 @media (min-width: 2600px) {
-  .game-card__front, .game-card__back, .game-card__bug {
+  .game-card__front, 
+  .game-card__back,
+  .game-card__bug {
     height: 99%;
     border-radius: 17px;
   }
@@ -282,7 +290,7 @@
   .game-card__back {
     background-position-x: 3px;
     background-position-y: 10px;
-}
+  }
 }
 
 @media (min-width: 3450px) {
@@ -290,7 +298,9 @@
     width: 16vw;
   }
 
-  .game-card__front, .game-card__back, .game-card__bug {
+  .game-card__front, 
+  .game-card__back, 
+  .game-card__bug {
     height: 98%;
   }
 }
@@ -353,7 +363,9 @@
     background-position-y: 158px;
   }
 
-  .game-card__back, .game-card__bug, .game-card__front {
+  .game-card__back,
+  .game-card__bug,
+  .game-card__front {
     background-position-x: 2px;
     background-position-y: 0;
     height: 99%;
@@ -419,7 +431,9 @@
     background-position-y: 158px;
   }
 
-  .game-card__back, .game-card__bug, .game-card__front {
+  .game-card__back, 
+  .game-card__bug, 
+  .game-card__front {
     background-position-x: 1px;
     background-position-y: 0;
     height: 99%;
@@ -438,7 +452,9 @@
     background-position-y: 158px;
   }
 
-  .game-card__back, .game-card__bug, .game-card__front {
+  .game-card__back, 
+  .game-card__bug, 
+  .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
   }
@@ -493,7 +509,9 @@
     background-position-y: 107px;
   }
 
-  .game-card__back, .game-card__bug, .game-card__front {
+  .game-card__back, 
+  .game-card__bug, 
+  .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
   }
@@ -527,7 +545,9 @@
     margin-left: -4vw;
   }
 
-  .game-card__front, .game-card__back, .game-card__bug{
+  .game-card__front, 
+  .game-card__back, 
+  .game-card__bug{
     border-radius: 6px;
   }
 
@@ -541,7 +561,9 @@
     background-position-y: 55px;
   }
 
-  .game-card__back, .game-card__bug, .game-card__front {
+  .game-card__back, 
+  .game-card__bug, 
+  .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
   }
@@ -592,11 +614,15 @@
     height: 100%;
   }
 
-  .game-card__front, .game-card__back, .game-card__bug{
+  .game-card__front, 
+  .game-card__back, 
+  .game-card__bug{
     border-radius: 3px;
   }
 
-  .game-card__back, .game-card__bug, .game-card__front {
+  .game-card__back, 
+  .game-card__bug, 
+  .game-card__front {
     background-position-x: 0;
     background-position-y: 0;
   }
