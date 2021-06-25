@@ -73,6 +73,6 @@ function discoverLevel() {
   if (level === 6) {
     field.style.width = "55vw";
   }
-
-  button.addEventListener("click", discoverLevel);
 }
+
+button.addEventListener("click", discoverLevel);
